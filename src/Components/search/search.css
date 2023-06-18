@@ -1,0 +1,31 @@
+.SearchLocation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.input {
+    width: 300px;
+    padding: 10px;
+    flex-wrap: wrap;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    transition: all 0.1s;
+    font-size: 15px;
+    border: 1px solid rgb(141, 211, 249);
+    transition: all 0.1s ease;
+    opacity: 1;
+    background: rgb(255, 255, 255);
+    transform: translateY(calc(50% + 4px));
+}
+
+  .input:placeholder-shown {
+    opacity: 9;
+    transform: translateY(1%);
+  }
+
+.input:focus {
+    outline: 0;
+    border-color: #939cf6;
+}

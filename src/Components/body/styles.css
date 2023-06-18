@@ -1,0 +1,6 @@
+.main_card {
+    width: 800px;
+    height: 600px;
+    background-image: linear-gradient(#0576e0, white);
+    flex-wrap: wrap;
+}
