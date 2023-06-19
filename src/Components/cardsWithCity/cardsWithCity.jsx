@@ -1,18 +1,18 @@
 import React from 'react'
 import './cardsWithCity.css'
 
-export const CardsWithCity = (cards) => {
+export const сardsWithCity = (cards) => {
     return (
     <div className="container">
         <div className='clouds'>
-            <div className='clouds-1'></div>
-            <div className='clouds-2'></div>
-            <div className='clouds-3'></div>
+            <div className='clouds_1'></div>
+            <div className='clouds_2'></div>
+            <div className='clouds_3'></div>
             <div className='card_text'>
-                <span className='city'></span>
-                <span className='сelsius'></span>
-                <span className='weather_description'></span>
-                <span className='max_min_temperature'></span>
+                <span className='city'>Moscow</span>
+                <span className='сelsius'>22</span>
+                <span className='weather_description'>Временами облачно</span>
+                <span className='max_min_temperature'>Макс.: 23&deg; , мин.: 12&deg;</span>
             </div>
         </div>
     </div>

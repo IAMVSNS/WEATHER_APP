@@ -6,7 +6,7 @@
     left:50%;
     top:30%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 5px 15px #91c6f1b3;
+    box-shadow: 0 5px 15px #2d97eeb3;
 }
 @keyframes clouds-loop-1 {
     to {
@@ -14,7 +14,7 @@
         }
     }
 
-.clouds-1 {
+.clouds_1 {
     background-image: url("https://cdn.discordapp.com/attachments/990641651175264306/1026619079949291570/clouds_233.png");
     animation: clouds-loop-1 100s infinite linear;
 }
@@ -25,7 +25,7 @@
         }
 }
 
-.clouds-2 {
+.clouds_2 {
     background-image: url("https://cdn.discordapp.com/attachments/990641651175264306/1026617444720201728/clouds_991.png");
     animation: clouds-loop-2 100s infinite linear;
 }
@@ -36,7 +36,7 @@
     }
 }
 
-.clouds-3 {
+.clouds_3 {
     background-image: url("https://cdn.discordapp.com/attachments/990641651175264306/1026615143339147374/clouds_55553.png");
     animation: clouds-loop-3 100s infinite linear;
 }
@@ -52,8 +52,8 @@
     right: 0;
     height: 100%;
 }
-    
-.clouds-1, .clouds-2, .clouds-3 {
+
+.clouds_1, .clouds_2, .clouds_3 {
     background-repeat: repeat-x;
     position: absolute;
     top: 0;
@@ -61,6 +61,11 @@
     left: 0;
     height: 900px;
 }
+
 .card_text {
-    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    /* place-items: center; */
 }
