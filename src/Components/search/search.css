@@ -1,8 +1,9 @@
-.SearchLocation {
+.searchLocation {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    margin: 15px 15px;
 }
 
 .input {
@@ -17,13 +18,7 @@
     transition: all 0.1s ease;
     opacity: 1;
     background: rgb(255, 255, 255);
-    transform: translateY(calc(50% + 4px));
 }
-
-  .input:placeholder-shown {
-    opacity: 9;
-    transform: translateY(1%);
-  }
 
 .input:focus {
     outline: 0;
