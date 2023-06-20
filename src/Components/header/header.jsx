@@ -1,22 +1,19 @@
 import React from 'react'
 import './header.css'
+import Sun from './sun.svg'
 
-// import picture from './Components/header/sunImage.png';
-
-export const Header = (header) => {
+export const Header = () => {
+  const date = new Date(Date.now()).toLocaleTimeString()
   return (
     <div className="header">
-      <div className='main_title'>
-        <p className='weather'><a className='url' href='#'>Погода</a></p>
-        {/* <div className='picture'>
-          <img src={picture} alt='sun' />
-        </div> */}
-        <p className='time_now'>12:12</p>
+      <div className='header_main_title'>
+        <span className='header_weather'><a className='url' href='#'>Погода</a></span>
+        <span className='header_time_now'>{date}</span>
       </div>
-      <img className='sun_image' src='../sunImage.png'></img>
-      <p className='today'><a className='url' href='#'>Сегодня</a></p>
-      <p className='tomorrow'><a className='url' href='#'>Завтра</a></p>
-      <p className='tenDays'><a className='url' href='#'>Неделя</a></p>
+      <Sun width={70} height={50}/>
+      <span className='today'><a className='url' href='#'>Сегодня</a></span>
+      <span className='tomorrow'><a className='url' href='#'>Завтра</a></span>
+      <span className='tenDays'><a className='url' href='#'>Неделя</a></span>
     </div>
   )
 }
