@@ -1,7 +1,7 @@
 import React from 'react'
-import './cardsWithCity.css'
+import './cardWithCities.css'
 
-export const сardsWithCity = ({ cards }) => {
+export const сardWithCities = ({ cards }) => {
     return (
     <div className="container">
         <div className='clouds'>

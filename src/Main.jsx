@@ -3,7 +3,8 @@ import './Components/body/styles.css'
 
 import { Header } from './Components/header/header.jsx'
 import { Search } from './Components/search/search.jsx'
-import { сardsWithCity } from './Components/cardsWithCity/cardsWithCity.jsx'
+import { сardWithCities } from './Components/cardWithCities/cardWithCities.jsx'
+import { hourlyWeather } from './Components/hourlyWeather/hourlyWeather.jsx'
 
 
 const Main = () => {
@@ -11,7 +12,8 @@ const Main = () => {
     <main className="main_card">
       <Header />
       <Search />
-      <сardsWithCity />
+      <сardWithCities />
+      <hourlyWeather />
     </main>
   )
 }
