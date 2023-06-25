@@ -24,7 +24,7 @@
     
 @keyframes clouds-loop-2 {
     to {
-        background-position: -1300px 0;
+        background-position: -1500px 0;
         }
 }
 
@@ -35,13 +35,13 @@
 
 @keyframes clouds-loop-3 {
     to {
-        background-position: -1500px 0;
+        background-position: -2000px 0;
     }
 }
 
 .clouds_3 {
     background-image: url("https://cdn.discordapp.com/attachments/990641651175264306/1026615143339147374/clouds_55553.png");
-    animation: clouds-loop-3 110s infinite linear;
+    animation: clouds-loop-3 100s infinite linear;
 }
 
 .clouds {
@@ -81,13 +81,13 @@
 }
 
 .city {
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .сelsius {
-    font-size: 60px;
+    font-size: 70px;
 }
 
 .weather_description, .max_min_temperature{
-    font-size: 15px;
+    font-size: 17px;
 }
