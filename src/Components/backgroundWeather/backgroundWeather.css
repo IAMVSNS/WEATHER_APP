@@ -1,14 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
 .container{
-    background: linear-gradient(to bottom right, #c7d7f8, #0576e0);
-    height: 300px;
-    width: 600px;
+    background: linear-gradient(to bottom right, #d1ddf4, #2690f3);
+    height: 800px;
+    width: 900px;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 5px 15px #2d97eeb3;
     z-index: 1;
 }
 @keyframes clouds-loop-1 {
@@ -50,44 +46,18 @@
     pointer-events: none;
     position: absolute;
     overflow: hidden;
-    top: 0;
     left: 0;
     right: 0;
-    height: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
 }
 
 .clouds_1, .clouds_2, .clouds_3 {
     background-repeat: repeat-x;
     position: absolute;
-    top: 100;
     right: 0;
     left: 0;
-    height: 900px;
-}
-
-.card_text {
-    display: grid;
-    place-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    font-family: 'Lora', serif;
-    color: black;
-    opacity: none;
-    font-weight: none;
-
-}
-
-.city {
-    font-size: 40px;
-}
-
-.сelsius {
-    font-size: 70px;
-}
-
-.weather_description, .max_min_temperature{
-    font-size: 17px;
+    height: 600px;
 }
