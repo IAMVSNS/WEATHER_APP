@@ -17,7 +17,7 @@
     border: 1px solid rgb(141, 211, 249);
     transition: all 0.1s ease;
     opacity: 1;
-    background: rgb(255, 255, 255);
+    background: rgb(255, 255, 255, 0.6);
 }
 
 .input:focus {

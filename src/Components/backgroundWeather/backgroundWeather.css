@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
-.container{
-    background: linear-gradient(to bottom right, #d1ddf4, #2690f3);
-    height: 800px;
-    width: 900px;
-    position: absolute;
-    z-index: 1;
-}
+
 @keyframes clouds-loop-1 {
     to {
         background-position: -1000px 0;
