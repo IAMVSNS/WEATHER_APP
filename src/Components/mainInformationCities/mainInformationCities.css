@@ -1,4 +1,6 @@
-.card_text {
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+.card-text {
     display: grid;
     place-items: center;
     margin-top: 30px;
@@ -9,14 +11,16 @@
     font-weight: none;
 }
 
-.city {
+.card-text__city {
     font-size: 40px;
 }
 
-.сelsius {
+.card-text__сelsius {
     font-size: 70px;
 }
 
-.weather_description, .max_min_temperature{
+.card-text__weather_description,
+.card-text__temperature_max,
+.card-text__temperature_min {
     font-size: 17px;
 }

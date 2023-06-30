@@ -7,6 +7,7 @@ import { Search } from './Components/search/search.jsx'
 import { CardsByHours } from './Components/cardsByHours/cardsByHours.jsx'
 import { MainInformationCities } from './Components/mainInformationCities/mainInformationCities.jsx'
 import { BackgroundWeather } from './Components/backgroundWeather/backgroundWeather.jsx' 
+import { Footer } from './Components/footer/footer.jsx'
 
 
 const Main = ({ cards }) => {
@@ -17,8 +18,9 @@ const Main = ({ cards }) => {
           <Search />
           <MainInformationCities />
           <CardsByHours />
+          <Footer/>
     </div>
   )
 }
 
-export default Mainтз
+export default Main

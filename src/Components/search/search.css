@@ -6,7 +6,7 @@
     margin: 15px 15px;
 }
 
-.input {
+.searchLocation__input {
     width: 300px;
     padding: 10px;
     flex-wrap: wrap;

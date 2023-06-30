@@ -4,7 +4,7 @@ import './search.css'
 export const Search = ({ search }) => {
     return (
         <div className='searchLocation'>
-            <input  className='input' type='text' placeholder='Поиск' />
+            <input  className='searchLocation__input' type='text' placeholder='Поиск' />
         </div>
     )
 }

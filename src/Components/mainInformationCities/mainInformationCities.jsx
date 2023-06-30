@@ -3,11 +3,14 @@ import './mainINformationCities.css'
 
 export const MainInformationCities = ({  }) => {
     return (
-    <div className='card_text'>
-        <span className='city'>Москва</span>
-        <span className='сelsius'>22&deg;</span>
-        <span className='weather_description'>Временами облачно</span>
-        <span className='max_min_temperature'>Макс.: 23&deg;, мин.: 12&deg;</span>
+    <div className='card-text'>
+        <span className='card-text__city'>Москва</span>
+        <span className='card-text__сelsius'>22&deg;</span>
+        <span className='card-text__weather_description'>Временами облачно</span>
+        <div className='card-text__temperature'>
+            <span className='card-text__temperature_max'>Макс.: <a className='max_degrees'>23&deg;</a>, </span>
+            <span className='card-text__temperature_min'>мин.: <a className='min_degrees'>12&deg;</a></span>
+        </div>
     </div>
     )
 }

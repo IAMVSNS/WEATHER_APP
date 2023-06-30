@@ -4,9 +4,9 @@ import './backgroundWeather.css'
 export const BackgroundWeather = ({ cards }) => {
     return (
         <div className='clouds'>
-            <div className='clouds_1'></div>
-            <div className='clouds_2'></div>
-            <div className='clouds_3'></div>
+            <div className='clouds__1'></div>
+            <div className='clouds__2'></div>
+            <div className='clouds__3'></div>
         </div>
     )
 }
