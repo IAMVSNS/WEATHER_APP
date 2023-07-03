@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+.clouds {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+    opacity: 0.4;
+    pointer-events: none;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+.cloud {
+    background-repeat: repeat-x;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 600px;
+}
+
+@keyframes clouds-loop-1 {
+    to {
+        background-position: -1000px 0;
+        }
+    }
+
+.clouds__1 {
+    background-image: url("https://cdn.discordapp.com/attachments/990641651175264306/1026619079949291570/clouds_233.png");
+    animation: clouds-loop-1 90s infinite linear;
+}
+    
+@keyframes clouds-loop-2 {
+    to {
+        background-position: -1500px 0;
+        }
+}
+
+.clouds__2 {
+    background-image: url("https://cdn.discordapp.com/attachments/990641651175264306/1026617444720201728/clouds_991.png");
+    animation: clouds-loop-2 100s infinite linear;
+}
+
+@keyframes clouds-loop-3 {
+    to {
+        background-position: -2000px 0;
+    }
+}
+
+.clouds__3 {
+    background-image: url("https://cdn.discordapp.com/attachments/990641651175264306/1026615143339147374/clouds_55553.png");
+    animation: clouds-loop-3 100s infinite linear;
+}

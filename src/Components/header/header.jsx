@@ -6,14 +6,14 @@ export const Header = () => {
   const date = new Date(Date.now()).toLocaleTimeString()
   return (
     <div className="header">
-      <div className='header_main_title'>
-        <span className='header_weather'><a className='url' href='#'>Погода</a></span>
-        <span className='header_time_now'>{date}</span>
+      <div className='header__title'>
+        <span className='header__title_weather'><a className='url' href='#'>Погода</a></span>
+        <span className='header__title_time'>{date}</span>
       </div>
       <Sun width={70} height={50}/>
-      <span className='today'><a className='url' href='#'>Сегодня</a></span>
-      <span className='tomorrow'><a className='url' href='#'>Завтра</a></span>
-      <span className='tenDays'><a className='url' href='#'>Неделя</a></span>
+      <span className='header__today'><a className='url' href='#'>Сегодня</a></span>
+      <span className='header__tomorrow'><a className='url' href='#'>Завтра</a></span>
+      <span className='header__week'><a className='url' href='#'>Неделя</a></span>
     </div>
   )
 }

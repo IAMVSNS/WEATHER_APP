@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 25px;
+    backdrop-filter: blur(15px)
+}
+
+.card {
+    display: grid;
+}
+
+.clock__weather {
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: center;
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.card__temperature {
+    display: flex;
+    justify-content: center;
+}

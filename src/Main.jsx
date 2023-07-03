@@ -1,20 +1,31 @@
 import React from 'react'
-import './Components/body/styles.css'
+import './styles.css'
+import './Components/backgroundWeather/backgroundWeather.css'
 
 import { Header } from './Components/header/header.jsx'
 import { Search } from './Components/search/search.jsx'
-import { сardWithCities } from './Components/cardWithCities/cardWithCities.jsx'
-import { hourlyWeather } from './Components/hourlyWeather/hourlyWeather.jsx'
+import { CardsByHours } from './Components/cardsByHours/cardsByHours.jsx'
+import { MainInformationCities } from './Components/mainInformationCities/mainInformationCities.jsx'
+import { BackgroundWeather } from './Components/backgroundWeather/backgroundWeather.jsx' 
+import { Footer } from './Components/footer/footer.jsx'
 
 
-const Main = () => {
+const Main = ({ cards }) => {
   return (
-    <main className="main_card">
-      <Header />
-      <Search />
-      <сardWithCities />
-      <hourlyWeather />
-    </main>
+    <body className="container">
+        <header>
+          <Header />
+        </header>
+        <main>
+          <BackgroundWeather />
+          <Search />
+          <MainInformationCities />
+          <CardsByHours />
+        </main>
+        <footer>
+          <Footer/>
+        </footer>
+    </body>
   )
 }
 

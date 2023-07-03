@@ -17,16 +17,16 @@
     color: rgb(255, 255, 255);
 }
 
-.header_main_title {
+.header__title {
     font-size: 40px;
 }
 
-.header_weather {
+.header__title_weather {
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
-.header_time_now {
+.header__title_time {
     font-size: 15px;
     display: flex;
     justify-content: right;

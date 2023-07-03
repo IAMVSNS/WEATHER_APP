@@ -1,0 +1,15 @@
+main {
+    max-height: 600px;
+    min-height: 400px;
+    max-width: 900px;
+    min-width: 700px;
+}
+
+
+.container {
+    background: linear-gradient(to bottom right, #d1ddf4, #2690f3);
+    height: 800px;
+    width: 900px;
+    position: absolute;
+    z-index: 1;
+}
