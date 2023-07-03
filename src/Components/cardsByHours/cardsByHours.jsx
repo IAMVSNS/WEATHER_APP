@@ -11,40 +11,40 @@ export const CardsByHours = () => {
     return (
         <section className='cards'>
         
-            <div className='card__1' >
-                <h6 className='clockWeather'>00:00</h6>
+            <div className='card__1 card'>
+                <h6 className='clock__weather'>00:00</h6>
                 <Rain width={90} heigth={70}/>
-                <span className='card_temperature'>19&deg;</span>
+                <span className='card__temperature'>19&deg;</span>
             </div>
 
-            <div className='card__2'>
-                <h6 className='clockWeather'>04:00</h6>
+            <div className='card__2 card'>
+                <h6 className='clock__weather'>04:00</h6>
                 <Cloud width={90} heigth={70}/>
-                <span className='card_temperature'>15&deg;</span>
+                <span className='card__temperature'>15&deg;</span>
             </div>
 
-            <div className='card__3'>
-                <h6 className='clockWeather'>08:00</h6>
+            <div className='card__3 card'>
+                <h6 className='clock__weather'>08:00</h6>
                 <Storm width={90} heigth={70}/>
-                <span className='card_temperature'>10&deg;</span>
+                <span className='card__temperature'>10&deg;</span>
             </div>
 
-            <div className='card__4'>
-                <h6 className='clockWeather'>12:00</h6>
+            <div className='card__4 card'>
+                <h6 className='clock__weather'>12:00</h6>
                 <StormWithRain width={90} heigth={70}/>
-                <span className='card_temperature'>6&deg;</span>
+                <span className='card__temperature'>6&deg;</span>
             </div>
 
-            <div className='card__5'>
-                <h6 className='clockWeather'>16:00</h6>
+            <div className='card__5 card'>
+                <h6 className='clock__weather'>16:00</h6>
                 <Sun width={90} heigth={70}/>
-                <span className='card_temperature'>18&deg;</span>
+                <span className='card__temperature'>18&deg;</span>
             </div>
 
-            <div className='card__6'>
-                <h6 className='clockWeather'>20:00</h6>
+            <div className='card__6 card'>
+                <h6 className='clock__weather'>20:00</h6>
                 <Snow width={90} heigth={70}/>
-                <span className='card_temperature'>0&deg;</span>
+                <span className='card__temperature'>0&deg;</span>
             </div>
 
         </section>

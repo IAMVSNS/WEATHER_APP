@@ -12,14 +12,20 @@ import { Footer } from './Components/footer/footer.jsx'
 
 const Main = ({ cards }) => {
   return (
-    <div className="container">
-          <BackgroundWeather />
+    <body className="container">
+        <header>
           <Header />
+        </header>
+        <main>
+          <BackgroundWeather />
           <Search />
           <MainInformationCities />
           <CardsByHours />
+        </main>
+        <footer>
           <Footer/>
-    </div>
+        </footer>
+    </body>
   )
 }
 

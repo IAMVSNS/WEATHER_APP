@@ -14,7 +14,7 @@
     align-items: top;
 }
 
-.clouds__1, .clouds__2, .clouds__3 {
+.cloud {
     background-repeat: repeat-x;
     position: absolute;
     right: 0;

@@ -12,16 +12,11 @@
     backdrop-filter: blur(15px)
 }
 
-.card__1,
-.card__2,
-.card__3,
-.card__4,
-.card__5,
-.card__6 {
+.card {
     display: grid;
 }
 
-.clockWeather {
+.clock__weather {
     display: flex;
     margin-bottom: 5px;
     justify-content: center;
@@ -30,9 +25,7 @@
     color: rgb(0, 0, 0);
 }
 
-
-
-.card_temperature {
+.card__temperature {
     display: flex;
     justify-content: center;
 }
