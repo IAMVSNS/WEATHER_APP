@@ -4,6 +4,7 @@ import Sun from './sun.svg'
 
 export const Header = () => {
   const date = new Date(Date.now()).toLocaleTimeString()
+
   return (
     <div className="header">
       <div className='header__title'>

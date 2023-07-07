@@ -1,10 +1,10 @@
 import React from 'react'
 import './mainINformationCities.css'
 
-export const MainInformationCities = ({  }) => {
+export const MainInformationCities = ({ city }) => {
     return (
     <div className='card-text'>
-        <span className='card-text__city'>Москва</span>
+        <span className='card-text__city'>{city}</span>
         <span className='card-text__сelsius'>22&deg;</span>
         <span className='card-text__weather_description'>Временами облачно</span>
         <div className='card-text__temperature'>
