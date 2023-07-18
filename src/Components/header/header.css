@@ -26,6 +26,7 @@
     margin-bottom: 5px;
 }
 
+.header__title_date,
 .header__title_time {
     font-size: 15px;
     display: flex;

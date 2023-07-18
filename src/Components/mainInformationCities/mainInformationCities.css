@@ -3,7 +3,7 @@
 .card-text {
     display: grid;
     place-items: center;
-    margin-top: 30px;
+    margin-top: 50px;
 
     font-family: 'Lora', serif;
     color: rgb(255, 255, 255);
