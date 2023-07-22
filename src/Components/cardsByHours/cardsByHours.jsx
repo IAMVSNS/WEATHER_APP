@@ -10,7 +10,7 @@ import Snow from './snow.svg'
 export const CardsByHours = ({ temp }) => {
     return (
         <section className='cards'>
-        
+
             <div className='card__1 card'>
                 <h6 className='clock__weather'>00:00</h6>
                 <Rain width={90} heigth={70}/>
