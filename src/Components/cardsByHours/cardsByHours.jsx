@@ -32,19 +32,19 @@ export const CardsByHours = ({ temp }) => {
             <div className='card__4 card'>
                 <h6 className='clock__weather'>12:00</h6>
                 <StormWithRain width={90} heigth={70}/>
-                <span className='card__temperature'>6&deg;</span>
+                <span className='card__temperature'>{temp[3]}&deg;</span>
             </div>
 
             <div className='card__5 card'>
                 <h6 className='clock__weather'>16:00</h6>
                 <Sun width={90} heigth={70}/>
-                <span className='card__temperature'>18&deg;</span>
+                <span className='card__temperature'>{temp[4]}&deg;</span>
             </div>
 
             <div className='card__6 card'>
                 <h6 className='clock__weather'>20:00</h6>
                 <Snow width={90} heigth={70}/>
-                <span className='card__temperature'>0&deg;</span>
+                <span className='card__temperature'>{temp[5]}&deg;</span>
             </div>
 
         </section>
