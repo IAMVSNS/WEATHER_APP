@@ -8,16 +8,28 @@ import {CardsByHours} from './Components/cardsByHours/cardsByHours.jsx'
 import {MainInformationCities} from './Components/mainInformationCities/mainInformationCities.jsx'
 import {BackgroundWeather} from './Components/backgroundWeather/backgroundWeather.jsx' 
 import {Footer} from './Components/footer/footer.jsx'
-
+import {weatherInterpretationCodes} from './utils'
 
 const Main = ({ cards }) => {
-  
-  // useEffect(() => {
+  const [dataWeather, setDataWeather] = useState({});
+ useEffect(() => {
+    
+   fetch('https://api.open-meteo.com/v1/forecast?latitude=55.7522&longitude=37.6156&hourly=temperature_2m,weathercode&timezone=Europe%2FMoscow&current_weather=true')
+   .then(response => {
+      return response.json()
+  })
+ .then(response => {setDataWeather(response)} )
+  },[])
 
-  //   const [user, setUsers] = useState('http://localhost:8080/');
+      useEffect(() => {
+        console.log(dataWeather?.current_weather?.temperature)
+    },[dataWeather])
 
-  // },[])
+// вставить коды погоды с описанием в отдельный файл, как компонент
 
+ // дополнить объект
+
+ // найти макс и минимальную темп, получить и подставить в верстку 
   
   return (
     <section className="container">
@@ -29,8 +41,8 @@ const Main = ({ cards }) => {
           <BackgroundWeather />
           <Search />
           <MainInformationCities city="Москва"
-            сelsius="22"
-            description="Временнами облачно"
+            сelsius={dataWeather?.current_weather?.temperature}
+            description={weatherInterpretationCodes[dataWeather?.current_weather?.weathercode]}
             />
           <CardsByHours temp={[1, 2, 3, 4, 5, 6]}/>
         </main>
