@@ -8,31 +8,28 @@ import {CardsByHours} from './Components/cardsByHours/cardsByHours.jsx'
 import {MainInformationCities} from './Components/mainInformationCities/mainInformationCities.jsx'
 import {BackgroundWeather} from './Components/backgroundWeather/backgroundWeather.jsx' 
 import {Footer} from './Components/footer/footer.jsx'
-import {weatherInterpretationCodes} from './utils'
+import {weatherInterpretationCodes} from './utils.js'
 
 const Main = ({ cards }) => {
+
   const [dataWeather, setDataWeather] = useState({});
- useEffect(() => {
-    
-   fetch('https://api.open-meteo.com/v1/forecast?latitude=55.7522&longitude=37.6156&hourly=temperature_2m,weathercode&timezone=Europe%2FMoscow&current_weather=true')
-   .then(response => {
-      return response.json()
-  })
- .then(response => {setDataWeather(response)} )
+
+  useEffect(() => {
+          // https://api.open-meteo.com/v1/forecast?latitude=55.7522&longitude=37.6156&hourly=temperature_2m,weathercode&timezone=Europe%2FMoscow&current_weather=true - Изначальное
+    fetch('https://api.open-meteo.com/v1/forecast?latitude=55.7522&longitude=37.6156&hourly=temperature_2m,weathercode&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=Europe%2FMoscow&current_weather=true')
+      .then(response => {
+        return response.json()
+      })
+      .then(response => {setDataWeather(response)} )
   },[])
 
       useEffect(() => {
         console.log(dataWeather?.current_weather?.temperature)
+        console.log(dataWeather)
     },[dataWeather])
-
-// вставить коды погоды с описанием в отдельный файл, как компонент
-
- // дополнить объект
-
- // найти макс и минимальную темп, получить и подставить в верстку 
   
   return (
-    <section className="container">
+    <div className="app">
       <header>
         <Header />
       </header>
@@ -40,17 +37,21 @@ const Main = ({ cards }) => {
         <main>
           <BackgroundWeather />
           <Search />
-          <MainInformationCities city="Москва"
+          <MainInformationCities
+            city="Москва"
             сelsius={dataWeather?.current_weather?.temperature}
             description={weatherInterpretationCodes[dataWeather?.current_weather?.weathercode]}
+            maxTemperature={dataWeather?.daily?.temperature_2m_max[0]}
+            minTemperature={dataWeather?.daily?.temperature_2m_min[0]}
             />
-          <CardsByHours temp={[1, 2, 3, 4, 5, 6]}/>
+          <CardsByHours
+            temp={[1, 2, 3, 4, 5, 6]}/>
         </main>
           <footer>
-            <Footer/>
+            <Footer street="Кутузовский проспект"/>
           </footer>
       </body>
-    </section>
+    </div>
   )
 }
 

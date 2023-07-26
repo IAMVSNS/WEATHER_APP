@@ -6,7 +6,7 @@ main {
 }
 
 
-.container {
+.app {
     background: linear-gradient(to bottom right, #d1ddf4, #2690f3);
     height: 800px;
     width: 900px;
