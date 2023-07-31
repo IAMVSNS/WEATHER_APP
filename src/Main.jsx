@@ -15,7 +15,6 @@ const Main = ({ cards }) => {
   const [dataWeather, setDataWeather] = useState({});
 
   useEffect(() => {
-          // https://api.open-meteo.com/v1/forecast?latitude=55.7522&longitude=37.6156&hourly=temperature_2m,weathercode&timezone=Europe%2FMoscow&current_weather=true - Изначальное
     fetch('https://api.open-meteo.com/v1/forecast?latitude=55.7522&longitude=37.6156&hourly=temperature_2m,weathercode&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=Europe%2FMoscow&current_weather=true')
       .then(response => {
         return response.json()
@@ -38,14 +37,16 @@ const Main = ({ cards }) => {
           <BackgroundWeather />
           <Search />
           <MainInformationCities
-            city="Москва"
+            city={dataWeather?.timezone_abbreviation}
             сelsius={dataWeather?.current_weather?.temperature}
             description={weatherInterpretationCodes[dataWeather?.current_weather?.weathercode]}
             maxTemperature={dataWeather?.daily?.temperature_2m_max[0]}
             minTemperature={dataWeather?.daily?.temperature_2m_min[0]}
             />
           <CardsByHours
-            temp={[1, 2, 3, 4, 5, 6]}/>
+            temp={[1, 2, 3, 4, 5, 6]}
+            clock={[dataWeather?.hourly?.time[0]]}
+            />
         </main>
           <footer>
             <Footer street="Кутузовский проспект"/>

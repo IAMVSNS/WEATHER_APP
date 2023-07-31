@@ -7,12 +7,12 @@ import StormWithRain from './stormWithRain.svg'
 import Sun from './sun.svg'
 import Snow from './snow.svg'
 
-export const CardsByHours = ({ temp }) => {
+export const CardsByHours = ({ temp, clock }) => {
     return (
         <section className='cards'>
 
             <div className='card__1 card'>
-                <h6 className='clock__weather'>00:00</h6>
+                <h6 className='clock__weather'>{clock[0]}</h6>
                 <Rain width={90} heigth={70}/>
                 <span className='card__temperature'>{temp[0]}&deg;</span>
             </div>
