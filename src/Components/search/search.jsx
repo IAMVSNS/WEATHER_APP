@@ -3,6 +3,7 @@ import './search.css'
 
 export const Search = ({ search }) => {
     const searchPlace = useCallback(() => {
+        // Нашел в консоли сайта с API, но мне кажется это не то что надо
         fetch (' https://geocoding-api.open-meteo.com/v1/search?name')
     .then(response => {
         return response.json()

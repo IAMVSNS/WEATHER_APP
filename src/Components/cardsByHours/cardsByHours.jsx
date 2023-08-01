@@ -7,7 +7,7 @@ import StormWithRain from './stormWithRain.svg'
 import Sun from './sun.svg'
 import Snow from './snow.svg'
 
-export const CardsByHours = ({ temp, clock }) => {
+export const CardsByHours = ({ temp, clock } ) => {
     return (
         <section className='cards'>
 
@@ -18,31 +18,31 @@ export const CardsByHours = ({ temp, clock }) => {
             </div>
 
             <div className='card__2 card'>
-                <h6 className='clock__weather'>04:00</h6>
+                <h6 className='clock__weather'>{clock[1]}</h6>
                 <Cloud width={90} heigth={70}/>
                 <span className='card__temperature'>{temp[1]}&deg;</span>
             </div>
 
             <div className='card__3 card'>
-                <h6 className='clock__weather'>08:00</h6>
+                <h6 className='clock__weather'>{clock[2]}</h6>
                 <Storm width={90} heigth={70}/>
                 <span className='card__temperature'>{temp[2]}&deg;</span>
             </div>
 
             <div className='card__4 card'>
-                <h6 className='clock__weather'>12:00</h6>
+                <h6 className='clock__weather'>{clock[3]}</h6>
                 <StormWithRain width={90} heigth={70}/>
                 <span className='card__temperature'>{temp[3]}&deg;</span>
             </div>
 
             <div className='card__5 card'>
-                <h6 className='clock__weather'>16:00</h6>
+                <h6 className='clock__weather'>{clock[4]}</h6>
                 <Sun width={90} heigth={70}/>
                 <span className='card__temperature'>{temp[4]}&deg;</span>
             </div>
 
             <div className='card__6 card'>
-                <h6 className='clock__weather'>20:00</h6>
+                <h6 className='clock__weather'>{clock[5]}</h6>
                 <Snow width={90} heigth={70}/>
                 <span className='card__temperature'>{temp[5]}&deg;</span>
             </div>

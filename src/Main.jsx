@@ -44,9 +44,25 @@ const Main = ({ cards }) => {
             minTemperature={dataWeather?.daily?.temperature_2m_min[0]}
             />
           <CardsByHours
-            temp={[1, 2, 3, 4, 5, 6]}
-            clock={[dataWeather?.hourly?.time[0]]}
+            temp={[
+              dataWeather?.hourly?.temperature_2m[0],
+              dataWeather?.hourly?.temperature_2m[4],
+              dataWeather?.hourly?.temperature_2m[8],
+              dataWeather?.hourly?.temperature_2m[12],
+              dataWeather?.hourly?.temperature_2m[16],
+              dataWeather?.hourly?.temperature_2m[20]
+              ]}
+
+            clock={[
+              dataWeather?.hourly?.time[0],
+              dataWeather?.hourly?.time[4],
+              dataWeather?.hourly?.time[8],
+              dataWeather?.hourly?.time[12],
+              dataWeather?.hourly?.time[16],
+              dataWeather?.hourly?.time[20]
+              ]}
             />
+
         </main>
           <footer>
             <Footer street="Кутузовский проспект"/>
