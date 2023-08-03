@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useCallback} from 'react'
 import './styles.css'
 import './Components/backgroundWeather/backgroundWeather.css'
 
@@ -27,10 +27,15 @@ const Main = ({ cards }) => {
         console.log(dataWeather)
     },[dataWeather])
   
+    const chooseDay = useCallback((item) => {
+      console.log(item.target.value)
+  })
+
+
   return (
     <div className="app">
       <header>
-        <Header />
+        <Header chooseDay={chooseDay}/>
       </header>
       <body>
         <main>
@@ -54,12 +59,12 @@ const Main = ({ cards }) => {
               ]}
 
             clock={[
-              dataWeather?.hourly?.time[0],
-              dataWeather?.hourly?.time[4],
-              dataWeather?.hourly?.time[8],
-              dataWeather?.hourly?.time[12],
-              dataWeather?.hourly?.time[16],
-              dataWeather?.hourly?.time[20]
+              dataWeather?.hourly?.time[0].substring(dataWeather?.hourly?.time[0].length-5, dataWeather?.hourly?.time[0].length),
+              dataWeather?.hourly?.time[4].substring(dataWeather?.hourly?.time[0].length-5, dataWeather?.hourly?.time[0].length),
+              dataWeather?.hourly?.time[8].substring(dataWeather?.hourly?.time[0].length-5, dataWeather?.hourly?.time[0].length),
+              dataWeather?.hourly?.time[12].substring(dataWeather?.hourly?.time[0].length-5, dataWeather?.hourly?.time[0].length),
+              dataWeather?.hourly?.time[16].substring(dataWeather?.hourly?.time[0].length-5, dataWeather?.hourly?.time[0].length),
+              dataWeather?.hourly?.time[20].substring(dataWeather?.hourly?.time[0].length-5, dataWeather?.hourly?.time[0].length)
               ]}
             />
 

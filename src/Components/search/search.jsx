@@ -2,9 +2,10 @@ import React, { useCallback } from 'react'
 import './search.css'
 
 export const Search = ({ search }) => {
-    const searchPlace = useCallback(() => {
+    const searchPlace = useCallback((item) => {
         // Нашел в консоли сайта с API, но мне кажется это не то что надо
-        fetch (' https://geocoding-api.open-meteo.com/v1/search?name')
+        console.log(item.target.value)
+        fetch (`https://geocoding-api.open-meteo.com/v1/search?name=${item.target.value}`)
     .then(response => {
         return response.json()
         })
