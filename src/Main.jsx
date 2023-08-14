@@ -22,6 +22,10 @@ const Main = ({ cards }) => {
       .then(response => {setDataWeather(response)} )
   },[])
 
+    setTimeout(function(){
+      window.location.reload(1);
+  }, 600000);
+
       useEffect(() => {
         console.log(dataWeather?.current_weather?.temperature)
         console.log(dataWeather)
@@ -30,7 +34,6 @@ const Main = ({ cards }) => {
     const chooseDay = useCallback((item) => {
       console.log(item.target.value)
   })
-
 
   return (
     <div className="app">
@@ -42,20 +45,20 @@ const Main = ({ cards }) => {
           <BackgroundWeather />
           <Search />
           <MainInformationCities
-            city={dataWeather?.timezone_abbreviation}
-            сelsius={dataWeather?.current_weather?.temperature}
+            city={dataWeather?.timezone_abbreviation} 
+            сelsius={Math.round(dataWeather?.current_weather?.temperature)}
             description={weatherInterpretationCodes[dataWeather?.current_weather?.weathercode]}
-            maxTemperature={dataWeather?.daily?.temperature_2m_max[0]}
-            minTemperature={dataWeather?.daily?.temperature_2m_min[0]}
+            maxTemperature={Math.round(dataWeather?.daily?.temperature_2m_max[0])}
+            minTemperature={Math.round(dataWeather?.daily?.temperature_2m_min[0])}
             />
           <CardsByHours
             temp={[
-              dataWeather?.hourly?.temperature_2m[0],
-              dataWeather?.hourly?.temperature_2m[4],
-              dataWeather?.hourly?.temperature_2m[8],
-              dataWeather?.hourly?.temperature_2m[12],
-              dataWeather?.hourly?.temperature_2m[16],
-              dataWeather?.hourly?.temperature_2m[20]
+              Math.round(dataWeather?.hourly?.temperature_2m[0]),
+              Math.round(dataWeather?.hourly?.temperature_2m[4]),
+              Math.round(dataWeather?.hourly?.temperature_2m[8]),
+              Math.round(dataWeather?.hourly?.temperature_2m[12]),
+              Math.round(dataWeather?.hourly?.temperature_2m[16]),
+              Math.round(dataWeather?.hourly?.temperature_2m[20])
               ]}
 
             clock={[
