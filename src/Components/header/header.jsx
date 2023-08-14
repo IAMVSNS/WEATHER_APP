@@ -24,7 +24,7 @@ export const Header = ({ chooseDay }) => {
 
   const timeString = `${hours.length < 2 ? "0" + hours : hours}:${minutes.length < 2 ? "0" + minutes : minutes}:${seconds.length < 2 ? "0" + seconds : seconds}`;
 
-console.log(chooseDay)
+// console.log(chooseDay)
 
   return (
     <div className="header">
