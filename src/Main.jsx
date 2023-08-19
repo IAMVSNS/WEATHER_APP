@@ -22,6 +22,7 @@ const Main = ({ cards }) => {
       .then(response => {setDataWeather(response)} )
   },[])
 
+  // Обновление каждый час
     setTimeout(function(){
       window.location.reload(1);
   }, 600000);

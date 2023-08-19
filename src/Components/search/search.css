@@ -20,7 +20,66 @@
     background: rgb(255, 255, 255, 0.6);
 }
 
+
+/* Выпадающее меню */
 .input:focus {
     outline: 0;
-    border-color: #939cf6;
+    border-color: #ffffff;
+}
+
+ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+}
+
+.search__location_dropdown_topmenu > li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+
+.search__location_dropdown_topmenu > li:last-child {
+    margin-right: 0;
+}
+
+.submenu__city {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Lora', serif;
+    transition: .5s linear;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+/* Шрифт списка городов */
+.search__location_dropdown .submenu__city:hover {
+    background: #99b8f7;
+    color: #eef3ff;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.search__location_dropdown .submenu {
+    visibility: hidden;
+    opacity: 0;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+}
+
+.search__location_dropdown ul li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
 }
