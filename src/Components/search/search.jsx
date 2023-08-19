@@ -13,7 +13,23 @@ export const Search = ({ search }) => {
     
     return (
         <div className='search__location'>
-            <input  onChange={searchPlace} className='search__location_input' type='text' placeholder='Поиск' />
+            <div className='search__location_dropdown'>
+                <ul className='search__location_dropdown_topmenu'>
+                    <li><input onChange={searchPlace} className='search__location_input' type='text' placeholder='Поиск' />
+                        <ul className='submenu'>
+                            <li><a className='submenu__city' href=''>Смоленск</a></li>
+                            <li><a className='submenu__city' href=''>Санкт-Петербург</a></li>
+                            <li><a className='submenu__city' href=''>Чебоксары</a></li>
+                            <li><a className='submenu__city' href=''>Казань</a></li>
+                            <li><a className='submenu__city' href=''>Екатеринбург</a></li>
+                            <li><a className='submenu__city' href=''>Новосибирск</a></li>
+                            <li><a className='submenu__city' href=''>Красноярск</a></li>
+                            <li><a className='submenu__city' href=''>Иркутск</a></li>
+                            <li><a className='submenu__city' href=''>Владивосток</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     )
 }
