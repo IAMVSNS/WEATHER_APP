@@ -49,7 +49,7 @@ ul {
     text-decoration: none;
     outline: none;
     font-family: 'Lora', serif;
-    transition: .5s linear;
+    transition: .2s linear;
 }
 
 .submenu {
@@ -58,10 +58,10 @@ ul {
     left: 0;
     width: 100%;
     z-index: 10;
-    -webkit-transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 /* Шрифт списка городов */

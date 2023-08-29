@@ -33,3 +33,8 @@
     display: flex;
     justify-content: center;
 }
+
+.cardSize {
+    width: 90px;
+    height: 70px;
+}

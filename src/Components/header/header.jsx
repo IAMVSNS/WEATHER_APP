@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import './header.css'
 import Sun from './sun.svg'
 
-export const Header = ({ chooseDay }) => {
+export const Header = ({  }) => {
   const date = (new Date()).toDateString()
   const [time, setTime] = useState(new Date());
 
@@ -24,7 +24,11 @@ export const Header = ({ chooseDay }) => {
 
   const timeString = `${hours.length < 2 ? "0" + hours : hours}:${minutes.length < 2 ? "0" + minutes : minutes}:${seconds.length < 2 ? "0" + seconds : seconds}`;
 
-// console.log(chooseDay)
+// Обновление по кнопкам
+
+  const chooseDay = () => {
+    window.location.reload();
+  }
 
   return (
     <div className="header">
