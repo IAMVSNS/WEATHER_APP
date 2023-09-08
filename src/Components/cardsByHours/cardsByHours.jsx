@@ -13,37 +13,37 @@ export const CardsByHours = ({ temp, clock } ) => {
 
             <div className='card__1 card'>
                 <h6 className='clock__weather'>{clock[0]}</h6>
-                <Rain width={90} heigth={50}/>
+                <Rain className='cardSize'/>
                 <span className='card__temperature'>{temp[0]}&deg;</span>
             </div>
 
             <div className='card__2 card'>
                 <h6 className='clock__weather'>{clock[1]}</h6>
-                <Cloud width={90} heigth={50}/>
+                <Cloud className='cardSize'/>
                 <span className='card__temperature'>{temp[1]}&deg;</span>
             </div>
 
             <div className='card__3 card'>
                 <h6 className='clock__weather'>{clock[2]}</h6>
-                <Storm width={90} heigth={50}/>
+                <Storm className='cardSize'/>
                 <span className='card__temperature'>{temp[2]}&deg;</span>
             </div>
 
             <div className='card__4 card'>
                 <h6 className='clock__weather'>{clock[3]}</h6>
-                <StormWithRain width={90} heigth={50}/>
+                <StormWithRain className='cardSize'/>
                 <span className='card__temperature'>{temp[3]}&deg;</span>
             </div>
 
             <div className='card__5 card'>
                 <h6 className='clock__weather'>{clock[4]}</h6>
-                <Sun width={90} heigth={50}/>
+                <Sun className='cardSize'/>
                 <span className='card__temperature'>{temp[4]}&deg;</span>
             </div>
 
             <div className='card__6 card'>
                 <h6 className='clock__weather'>{clock[5]}</h6>
-                <Snow width={90} heigth={50}/>
+                <Snow className='cardSize'/>
                 <span className='card__temperature'>{temp[5]}&deg;</span>
             </div>
 
